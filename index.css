@@ -1,83 +1,84 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: none;
 }
 
-header{
+header {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-ul{
+ul {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
     align-items: center;
 }
 
-ul li a{
+ul li a {
     padding: 0 20px;
     text-decoration: none;
     color: #3a3a3a;
-    display: inline-block ;
+    display: inline-block;
 }
 
-li a::after{
+li a::after {
     content: '';
     display: block;
     height: 4px;
     width: 0;
-    background:#c4c4f7 ;
+    background: #c4c4f7;
     transition: all .5s;
 }
 
-li a:hover::after{
+li a:hover::after {
     width: 100%;
 }
 
-main{
+main {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.ap-img{
-  max-width: 670px;
-  height: auto;
+.ap-img {
+    max-width: 670px;
+    height: auto;
 }
 
-.content-left{
+.content-left {
     width: 30%;
 }
 
-main h1{
+main h1 {
     font-size: 54px;
     color: #13384f;
     text-transform: uppercase;
 }
- main h2{
+
+main h2 {
     font-size: 25px;
     color: #fca70c;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 8px;
- }
+}
 
- main p{
+main p {
     font-size: 20px;
     font-weight: 400;
     column-rule: #333;
     line-height: 31.4px;
-    margin: 30px 0 ;
- }
+    margin: 30px 0;
+}
 
- .cta{
+.cta {
     padding: 15px 30px;
     background-color: #c4c4f7;
     color: white;
@@ -86,9 +87,9 @@ main h1{
     font-weight: 700;
     text-transform: uppercase;
     border-radius: 50px;
- }
+}
 
- .signup-btn{
+.signup-btn {
     padding: 10px 20px;
     background-color: #c4c4f7;
     color: white;
@@ -97,4 +98,43 @@ main h1{
     font-weight: 700;
     text-transform: uppercase;
     border-radius: 50px;
- }
+}
+
+/* Media Queries */
+@media (max-width: 799px) {
+    * {
+        padding: 5px;
+        width: 100%;
+    }
+   
+
+    /* small screen  */
+    @media (max-width: 477px) {
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+        main p {
+           width: 23%;
+           margin-right: 4px;
+        }
+
+        .ap-img {
+            width: 250px;
+            height: 250px;
+        }
+
+        .cta {
+            padding: 15px 30px;
+            width: 300px;
+        }
+    }
+}
